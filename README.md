@@ -33,7 +33,8 @@ Users extending from this image will simply need:
 
 ### To Use:
 
-Your `Dockerfile`:
+Your `Dockerfile` (assuming your static content lives under the `static`
+directory when building):
 
 ```
 FROM fcarriedo/serve:v1.0

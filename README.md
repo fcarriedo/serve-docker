@@ -49,3 +49,9 @@ COPY static /html
 ### To run
 
     $ docker run -it -p 8086:80 yourimagename
+
+### To access
+
+Your browser to:
+
+    http://[host]:8086/myfile.html

@@ -4,14 +4,14 @@ The repository that builds a very minimal docker container (~9MB) for file servi
 
 Note: Intended for `localhost` use as no `https` is supported.
 
-This images is based on alpine and [serve](https://github.com/fcarriedo/serve)
-to achieve its minimal size.
+This images is based on [alpine](https://hub.docker.com/_/alpine) and
+[serve](https://github.com/fcarriedo/serve) to achieve its minimal size.
 
 ## Publishing the image on docker hub
 
 Build the image and tag it:
 
-    $ docker build . -t fcarriedo/serve:v1.0
+    $ docker build . -t fcarriedo/serve:v1.1
 
 Setup the user ID used to log into docker hub:
 
@@ -23,7 +23,7 @@ Make sure docker logs into the registry:
 
 Push the image into docker hub:
 
-    $ docker push fcarriedo/serve:v1.0
+    $ docker push fcarriedo/serve:v1.1
 
 Check that the image you just pushed appears in docker hub.
 
@@ -37,7 +37,7 @@ Your `Dockerfile` (assuming your static content lives under the `static`
 directory when building):
 
 ```
-FROM fcarriedo/serve:v1.0
+FROM fcarriedo/serve:v1.1
 
 COPY static /html
 ```
